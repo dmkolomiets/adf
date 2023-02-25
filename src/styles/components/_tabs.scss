@@ -1,0 +1,154 @@
+
+
+    $base-color: #e9ecff;
+    $second-color: #f8f9ff;
+    $third-color: #FBC02D;
+    $site: #fff;
+    $light: #fff;
+    
+    .tabs {
+     position: relative;
+     background: $site;
+     color: $light;
+     font-size: 20px;
+     margin: 100px 0;
+
+     @media (max-width: 1199px) {
+        margin: 50px 0;
+     }
+    }
+    
+    .grid {
+     list-style: none;
+     margin-left: -40px;
+    }
+    
+    .gc {
+     display: inline-block;
+     margin-right: -.25em;
+     min-height: 1px;
+     padding-left: 40px;
+     vertical-align: top;
+
+     @media (max-width: 575px) {
+        display: block;
+     }
+    }
+    
+    .gc--1-of-3 {
+     width: 33.33333%;
+
+     @media (max-width: 575px) {
+        width: 100%;
+    }
+
+     .menu {
+        @media (max-width: 575px) {
+            display: flex;
+            justify-content: space-around;
+        }
+     }
+    }
+    
+    .gc--2-of-3 {
+     width: 66.66666%;
+     padding-top: 38px;
+
+     @media (max-width: 991px) {
+        padding-top: 0;
+        }
+        @media (max-width: 575px) {
+            margin-top: 10px;
+            width: 100%;
+            height: 115px;
+        }
+    }
+    
+    .naccs {
+     position: relative;
+     max-width: 900px;
+    }
+    
+    .naccs .menu div {
+     cursor: pointer;
+     position: relative;
+     vertical-align: middle;
+    }
+    
+    .naccs .menu div span {
+        color: #000;
+        font-size: 52px;
+        font-weight: 700;
+
+        @media (max-width: 991px) {
+            font-size: 48px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 40px;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 23px;
+        }
+    }
+    
+    .naccs .menu div.active span {
+     color: #838383;
+    }
+    
+    
+    ul.nacc {
+     position: relative;
+     list-style: none;
+     
+    }
+    
+    ul.nacc li {
+     opacity: 0;
+     top: 0;
+     left: 0;
+     position: absolute;
+     list-style: none;
+
+     p {
+        padding: 10px 0;
+        font-size: 22px;
+        font-weight: 300;
+        position: relative;
+
+        @media (max-width: 991px) {
+            font-size: 20px;
+        }
+        @media (max-width: 767px) {
+            font-size: 17px;
+        }
+        @media (max-width: 575px) {
+            font-size: 13px;
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: -35px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            background: url('../images/Check.svg') no-repeat center;
+        }
+     }
+     
+    }
+    
+    ul.nacc li.active {
+     transition-delay: .1s;
+     z-index: 2;
+     opacity: 1;
+     padding: 0;
+     margin: 0;
+    }
+    
+    ul.nacc li p {
+     margin: 0;
+    }
